@@ -1,0 +1,826 @@
+/* Base */
+@import url('https://fonts.googleapis.com/css2?family=OpenDyslexic&display=swap');
+
+:root {
+    --primary-color: #7e57c2;
+    --secondary-color: #9575cd;
+    --bg-color: #f3e5f5;
+    --text-color: #333;
+    --white: #fff;
+}
+html{
+        scroll-behavior: smooth;
+    
+    
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 300;
+}
+
+
+/* Progress bar */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: var(--primary-color);
+    z-index: 1000;
+    transition: width 0.2s;
+}
+
+/* Header */
+.hero {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 span {
+    color: var(--secondary-color);
+}
+
+.cta {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta:hover {
+    background: var(--primary-color);
+}
+
+/* Navigation */
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Projets */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--white);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    overflow-y:scroll;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.project-card h3 {
+    margin: 10px;
+    color: var(--primary-color);
+}
+
+.project-card p {
+    margin: 10px;
+}
+
+/* Contact */
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact input, .contact textarea, .contact button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact button {
+    background: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: var(--secondary-color);
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer nav a:hover {
+    text-decoration: underline;
+}
+
+/* Compétences */
+.skills {
+    padding: 50px 20px;
+    text-align: center;
+    background: var(--white);
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+.skills-list div {
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills-list h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.skills-list p {
+    margin: 0;
+}
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.about-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.software-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.software-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.software-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+.hidden {
+    display: none;
+}
+
+.hidden.active {
+    display: block;
+    background: var(--bg-color);
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Utilisation de la police Poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4; /* Fond clair */
+    color: #333; /* Texte sombre */
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #6a1b9a;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4a148c;
+}
+
+a:focus {
+    outline: 3px solid #ff0;
+    outline-offset: 2px;
+}
+
+/* Section À propos */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    padding: 50px;
+}
+
+.about-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.about-text h2 {
+    color: #2a2a2a;
+	
+}
+
+/* Compétences et logiciels */
+.skills {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.software {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.software-item {
+    text-align: center;
+}
+
+.software-icon {
+    width: 50px;
+    height: 50px;
+}
+
+h3 {
+    color: #2a2a2a;
+}
+
+/* Projets */
+.projects {
+    padding: 50px;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.project-item h3 {
+    color: #2a2a2a;
+}
+.projects img{
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #ff0;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Accessibilité : Contraste et tailles */
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 300;
+}
+
+a:focus {
+    outline: 3px solid #ff0;
+    outline-offset: 2px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* Style général du menu d'accessibilité */
+/* Menu d'accessibilité */
+#accessibility-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+#accessibility-menu button {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#accessibility-menu button:hover {
+    background-color: #4a148c;
+}
+
+#accessibility-options {
+    display: none;
+}
+
+#accessibility-menu button[aria-expanded="true"] + #accessibility-options {
+    display: block;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+/* Mode contraste élevé */
+.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+.high-contrast a {
+    color: #ff0;
+}
+
+/* Désactivation des animations */
+.no-animations * {
+    transition: none !important;
+    animation: none !important;
+}
+/* Mode contraste élevé */
+.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+.high-contrast a {
+    color: #ff0;
+}
+
+/* Mode Dyslexie : police adaptée */
+.dyslexia-mode {
+    font-family: 'OpenDyslexic', sans-serif;
+}
+
+/* Mode Daltonisme : ajustement des couleurs pour les daltoniens */
+.color-blind-mode {
+    filter: grayscale(100%) contrast(100%) brightness(100%);
+}
+
+/* Désactivation des animations */
+.no-animations * {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Amélioration du contraste dans le texte de la section hero (par exemple) */
+.hero span {
+    color: #ff0 !important; /* Assure un contraste élevé pour les éléments importants */
+}
+
+/* Mise à jour générale pour le contraste */
+body {
+    background-color: #f4f4f4;
+    color: #222; /* Texte sombre sur fond clair */
+}
+
+/* Contraste pour les liens */
+a {
+    color: #6a1b9a;
+}
+
+a:hover, a:focus {
+    color: #ff0;
+    text-decoration: underline;
+}
+
+/* Adaptation des boutons du menu d'accessibilité */
+#accessibility-menu button {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#accessibility-menu button:hover {
+    background-color: #4a148c;
+}
+
+#accessibility-menu button[aria-expanded="true"] + #accessibility-options {
+    display: block;
+}
+
+.accessibility-options {
+    display: none;
+}
+/* Ajouter la police OpenDyslexic */
+
+/* Styles de base pour le menu de navigation */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6a1b9a;
+    padding: 10px 20px;
+}
+
+#navbar .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Menu hamburger */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+}
+
+/* Masquer les liens de navigation sur petit écran */
+.nav-links {
+    display: flex;
+}
+
+/* Sur les petits écrans, le menu se cache et devient un hamburger */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #6a1b9a;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+/* Styles par défaut (mode clair) */
+body {
+    background-color: #f4f4f4;
+    color: #222;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation - mode clair */
+#navbar {
+    background-color: #6a1b9a;
+    color: white;
+}
+
+.nav-links a {
+    color: white;
+}
+
+/* Bouton Mode Nuit */
+#night-mode-toggle {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#night-mode-toggle:hover {
+    color: #ff0;
+}
+
+/* Mode Nuit - styles */
+.night-mode {
+    background-color: #2f2f2f;  /* Fond sombre */
+    color: #f4f4f4;  /* Texte clair */
+}
+
+/* Navigation - mode nuit */
+.night-mode #navbar {
+    background-color: #333;
+}
+
+.night-mode .nav-links a {
+    color: #f4f4f4;
+}
+
+/* Links dans le mode nuit */
+.night-mode a {
+    color: #f4f4f4;
+}
+
+.night-mode a:hover {
+    color: #ff0;
+}
+/* Style pour le bouton Reset */
+#reset-button {
+    background-color: #f4f4f4;
+    border: 2px solid #6a1b9a;
+    color: #6a1b9a;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#reset-button:hover {
+    background-color: #6a1b9a;
+    color: #fff;
+}
+
+/* Quand le bouton Reset a été utilisé */
+#reset-button.used {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+/* Modifications pour la section Compétences */
+#skills {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Mode Nuit - changer les couleurs de la section Compétences */
+.night-mode #skills {
+    background-color: #333;
+    color: #020202;
+}
+
+.night-mode #skills h2 {
+    color: #ff0;
+}
+
+.night-mode #skills .skill {
+    color: #f4f4f4;
+}
+/* Boutons d'accessibilité */
+button {
+    background-color: #f4f4f4;
+    border: 2px solid #6a1b9a;
+    color: #6a1b9a;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Lorsque le bouton est activé (change de couleur) */
+button.active {
+    background-color: #6a1b9a;
+    color: #fff;
+}
+
+/* Bouton Réinitialiser ne change jamais de couleur */
+#reset-button {
+    background-color: #f4f4f4;
+    color: #6a1b9a;
+    border: 2px solid #6a1b9a;
+}
+
+/* Lorsque le bouton Reset est cliqué */
+#reset-button.used {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+#reset-button:hover {
+    background-color: #6a1b9a;
+    color: #fff;
+}
+
+/* Hover sur les autres boutons */
+button:hover:not(#reset-button) {
+    background-color: #6a1b9a;
+    color: #fff;
+}
+
+/* Style du menu de navigation */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6a1b9a;
+    padding: 15px;
+    position: relative;
+}
+
+/* Style de la liste de liens */
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* Style du bouton burger */
+.menu-toggle {
+    display: none; /* Masqué par défaut sur desktop */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Affichage du bouton burger sur mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Affiche le burger sur mobile */
+    }
+
+    .nav-links {
+        display: none; /* Cache le menu par défaut sur mobile */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #6a1b9a;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .nav-links.open {
+        display: flex; /* Affiche le menu lorsqu'il est ouvert */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+/* Animation du menu burger lorsqu'il est cliqué */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
