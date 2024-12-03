@@ -564,6 +564,7 @@ a:hover, a:focus {
     align-items: center;
     background-color: #6a1b9a;
     padding: 10px 20px;
+	border-radius:5px
 }
 
 #navbar .logo a {
